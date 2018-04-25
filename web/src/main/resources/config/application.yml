@@ -1,0 +1,16 @@
+server:
+
+  port: 8980
+  context-path: /jeesite-web
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+
+  profiles:
+    active: default
+    
+  main:
+    banner-mode: "off"
+
+debug: true

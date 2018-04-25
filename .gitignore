@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/jeesite-framework.iml
+
+/modules/mvnw.cmd
+/modules/.mvn/
+/common/.gitignore
+/common/.mvn/
+/modules/mvnw
+/common/mvnw.cmd
+/common/mvnw
+/modules/.gitignore
