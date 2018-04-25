@@ -8,7 +8,11 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.10.RELEASE</version>
     </parent>
-
+    <modules>
+        <module>common</module>
+        <module>modules</module>
+        <module>web</module>
+    </modules>
     <groupId>com.jeesite</groupId>
     <artifactId>jeesite-parent</artifactId>
     <version>4.0-SNAPSHOT</version>

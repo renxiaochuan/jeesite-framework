@@ -17,3 +17,4 @@ gen
 /common/mvnw.cmd
 /common/mvnw
 /modules/.gitignore
+/web/.mvn/
