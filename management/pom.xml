@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.jeesite</groupId>
+        <artifactId>jeesite-parent</artifactId>
+        <version>4.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>management</artifactId>
+    <packaging>war</packaging>
+
+
+    <name>management</name>
+    <url>http://jeesite.com</url>
+    <inceptionYear>2013-Now</inceptionYear>
+
+    <properties>
+
+        <start-class>com.jeesite.com.jeesite.modules.config.ManagerApplication</start-class>
+
+        <!-- environment setting -->
+        <java.version>1.8</java.version>
+        <eclipse-plugin-download-sources>false</eclipse-plugin-download-sources>
+        <eclipse-plugin-download-javadocs>false</eclipse-plugin-download-javadocs>
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- 核心模块 -->
+        <dependency>
+            <groupId>com.jeesite</groupId>
+            <artifactId>jeesite-module-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 内容管理模块
+        <dependency>
+            <groupId>com.jeesite</groupId>
+            <artifactId>jeesite-module-cms</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>-->
+
+        <!-- 微信模块
+        <dependency>
+            <groupId>com.jeesite</groupId>
+            <artifactId>jeesite-module-weixin</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>-->
+
+        <!-- 自定义jar依赖包演示
+        <dependency>
+            <groupId>com.jeesite</groupId>
+            <artifactId>test-core</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/test-core-1.0.jar</systemPath>
+        </dependency> -->
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <outputDirectory>${project.basedir}/target/classes/</outputDirectory>
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+            </plugin> -->
+
+            <!-- Eclipse插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <configuration>
+                    <downloadSources>${eclipse-plugin-download-sources}</downloadSources>
+                    <downloadJavadocs>${eclipse-plugin-download-javadocs}</downloadJavadocs>
+                    <wtpContextName>${project.artifactId}</wtpContextName>
+                    <wtpversion>2.0</wtpversion>
+                    <jeeversion>6.0</jeeversion>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <id>thinkgem</id>
+            <name>WangZhen</name>
+            <email>thinkgem at 163.com</email>
+            <roles><role>Project lead</role></roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>JeeSite</name>
+        <url>http://jeesite.com</url>
+    </organization>
+
+    <repositories>
+
+        <repository>
+            <id>aliyun-repos</id>
+            <name>Aliyun Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-repos</id>
+            <name>Sonatype Repository</name>
+            <url>https://oss.sonatype.org/content/groups/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-repos-s</id>
+            <name>Sonatype Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+
+    </repositories>
+
+    <pluginRepositories>
+
+        <pluginRepository>
+            <id>aliyun-repos</id>
+            <name>Aliyun Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+
+    </pluginRepositories>
+</project>

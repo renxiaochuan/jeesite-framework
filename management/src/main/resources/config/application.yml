@@ -1,0 +1,16 @@
+server:
+
+  port: 8981
+  context-path: /manager
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+
+  profiles:
+    active: default
+    
+  main:
+    banner-mode: "off"
+
+debug: true
