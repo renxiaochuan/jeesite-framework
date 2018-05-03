@@ -13,13 +13,13 @@
 	<artifactId>jeesite-web</artifactId>
 	<packaging>war</packaging>
 	
-	<name>JeeSite Boot</name>
+	<name>web</name>
 	<url>http://jeesite.com</url>
 	<inceptionYear>2013-Now</inceptionYear>
 	
 	<properties>
 		
-		<start-class>com.jeesite.modules.config.Application</start-class>
+		<start-class>com.jeesite.Application</start-class>
 		
 		<!-- environment setting -->
 		<java.version>1.8</java.version>
@@ -29,7 +29,12 @@
 	</properties>
 
 	<dependencies>
-		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -70,7 +75,7 @@
 	
 	<build>
 		<finalName>${project.artifactId}</finalName>
-		<outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
+		<outputDirectory>${project.basedir}/target/classes/</outputDirectory>
 		<plugins>
 			
 			<plugin>

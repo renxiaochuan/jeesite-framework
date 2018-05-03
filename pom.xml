@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>management</module>
+        <module>common</module>
+        <module>modules</module>
+        <module>web</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -37,7 +43,7 @@
         <beetl.version>2.7-SNAPSHOT</beetl.version>
         <ehcache-web.version>2.0.4</ehcache-web.version>
         <quartz.version>2.2.3</quartz.version>
-
+        <fastjson.version>1.2.5</fastjson.version>
         <!-- environment setting -->
         <java.version>1.7</java.version>
         <eclipse-plugin-download-sources>false</eclipse-plugin-download-sources>
