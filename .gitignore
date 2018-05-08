@@ -17,4 +17,6 @@ gen
 /common/mvnw.cmd
 /common/mvnw
 /modules/.gitignore
-/web/.mvn/
+
+/web/src/main/webapp/WEB-INF/classes/
+

@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.jeesite.modules.config.Application;
+import com.jeesite.modules.config.WebApplication;
 
 /**
  * 初始化核心表数据
@@ -16,7 +16,7 @@ import com.jeesite.modules.config.Application;
  * @version 2017-10-22
  */
 @ActiveProfiles("test")
-@SpringBootTest(classes=Application.class)
+@SpringBootTest(classes= WebApplication.class)
 @Rollback(false)
 public class InitCoreData extends com.jeesite.modules.sys.db.InitCoreData {
 	
